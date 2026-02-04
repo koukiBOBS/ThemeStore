@@ -30,7 +30,7 @@ import java.util.Locale
 class ThemeInstallAccessibilityService : AccessibilityService() {
 
     companion object {
-        private const val ACTION_SERVICE_UP = "io.vi.hypertheme.action_Service_UP"
+        private const val ACTION_SERVICE_UP = "com.merak.action_Service_UP"
         private val ALARM_ACTION = String(
             Base64.decode("bWl1aS5pbnRlbnQuYWN0aW9uLkNIRUNLX1RJTUVfVVA=", Base64.DEFAULT)
         )
@@ -136,7 +136,7 @@ class ThemeInstallAccessibilityService : AccessibilityService() {
         KeepAliveService.requestRefresh(applicationContext)
         
         Intent(ACTION_SERVICE_UP).apply {
-            setPackage("io.vi.hypertheme")
+            setPackage("com.merak")
             sendBroadcast(this)
         }
         super.onServiceConnected()
@@ -152,7 +152,7 @@ class ThemeInstallAccessibilityService : AccessibilityService() {
         }
         
         Intent(ACTION_SERVICE_UP).apply {
-            setPackage("io.vi.hypertheme")
+            setPackage("com.merak")
             sendBroadcast(this)
         }
         
